@@ -1,0 +1,168 @@
+:root {
+  font-family: system-ui, sans-serif;
+  background: #f0f4f8;
+  color: #1a1a1a;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 2rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.sub {
+  margin: 0.25rem 0 0;
+  color: #546e7a;
+  font-size: 0.9rem;
+}
+
+.banner {
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  margin-bottom: 0.9rem;
+  font-size: 0.88rem;
+}
+
+.banner.err {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.banner.ok {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.card h2 {
+  margin: 0 0 0.85rem;
+  font-size: 1rem;
+}
+
+.form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #455a64;
+}
+
+.form label.check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form input[type="text"],
+.form input[type="number"] {
+  padding: 0.45rem 0.55rem;
+  border: 1px solid #cfd8dc;
+  border-radius: 6px;
+  font: inherit;
+}
+
+.row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+button {
+  font: inherit;
+  padding: 0.45rem 0.85rem;
+  border-radius: 6px;
+  border: none;
+  background: #00838f;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #006064;
+}
+
+button.sec {
+  background: #eceff1;
+  color: #37474f;
+}
+
+button.danger {
+  background: #c62828;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #eceff1;
+}
+
+.list li.done strong {
+  text-decoration: line-through;
+  color: #78909c;
+}
+
+.main {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.tick {
+  min-width: 2rem;
+  padding: 0.25rem;
+  background: #eceff1;
+  color: #37474f;
+}
+
+.meta {
+  display: block;
+  font-size: 0.82rem;
+  color: #78909c;
+  font-weight: normal;
+}
+
+.acts {
+  display: flex;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.acts button {
+  padding: 0.3rem 0.55rem;
+  font-size: 0.82rem;
+}
+
+.muted {
+  color: #90a4ae;
+}
