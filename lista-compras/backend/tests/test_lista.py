@@ -3,6 +3,7 @@ import pytest
 from unittest.mock import patch
 
 from app.models.item import ShoppingItem
+from app.services.item_service import ItemValidationError
 
 
 @patch("app.routes.items.item_service")
@@ -60,7 +61,11 @@ class TestRotasCriacao:
         assert data["id"] == 6
         mock_svc.create_item.assert_called_once()
 
-    def test_item_erro_400(self, mock_svc, client):
+    def test_item_erro(self, mock_svc, client):
         mock_svc.create_item.side_effect = ItemValidationError(
-            
+            "O nome do item é obrigatório.", code="name_required"
         )
+        resp = client.post("/api/books")
+        assert resp.status_code == 404
+        
+        
